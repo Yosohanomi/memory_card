@@ -34,8 +34,8 @@ rb_h = QHBoxLayout()
 
 rb_v1.addWidget(rb_ans1)
 rb_v1.addWidget(rb_ans2)
-rb_v1.addWidget(rb_ans3)
-rb_v1.addWidget(rb_ans4)
+rb_v2.addWidget(rb_ans3)
+rb_v2.addWidget(rb_ans4)
 
 rb_h.addLayout(rb_v1)
 rb_h.addLayout(rb_v2)
@@ -59,7 +59,7 @@ h1_main.addWidget(btn_rest)
 h1_main.addWidget(sp_rest)
 h1_main.addWidget(lb_rest)
 
-h2_main.Widget(lb_question, aligment=(Qt.AlignHCenter | Qt.AlignVCenter))
+h2_main.addWidget(lb_question, alignment=(Qt.AlignHCenter | Qt.AlignVCenter))
 
 h3_main.addWidget(gbAns)
 h3_main.addWidget(gb_resuslt)
