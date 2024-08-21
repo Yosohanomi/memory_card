@@ -48,19 +48,19 @@ def check():
     rdGroup.setExclusive(False)
     for answer in radio_buttons:
         if answer.isChecked():
-            if answer.text() == lb_rightAns:
+            if answer.text() == lb_rightAns.text():
                 cur_q.got_right()
                 lb_result.setText("Вірно!")
                 answer.setChecked(False)
                 break
-        else:
-            lb_result.setText("Не вірно!")
-            cur_q.got_wrong
+            else:
+                lb_result.setText("Не вірно!")
+                cur_q.got_wrong()
 
     rdGroup.setExclusive(True)
 
 def click_ok():
-    if btn_next.text == "Відповісти":
+    if btn_next.text() == "Відповісти":
         check()
         gbAns.hide()
         gb_resuslt.show()
@@ -118,5 +118,5 @@ def add_question():
 
 btn_add_ques.clicked.connect(add_question)
 
-menu_w.show()
+window.show()
 app.exec_()
